@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "MediaFireplace",
+  "version": "1.0",
+
+  "description": "Make all links to mediafire.com to open in new tabs or windows. Useful for preventing MediaFire from interrupting your browsing session and letting it take over your tab with an interstitial advertisement or other such nonsense. Also prevents Referrer headers from being sent by browsers that support \"referrerpolicy\" attributes on <a> elements.",
+
+  "icons": {
+    "64": "icons/icon-64.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["mediafireplace.js"]
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+        "id": "mediafireplace@ciinet.org"
+    }
+  }
+
+}
